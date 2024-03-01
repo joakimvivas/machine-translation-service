@@ -24,7 +24,7 @@ You can now access the app on your local browser by using
 http://localhost:5000/
 ```
 
-## To run with docker
+### To run with docker
 
 ```
 docker build -t machine-translation-service .
