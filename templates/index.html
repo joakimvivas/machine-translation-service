@@ -2,78 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Translation flask API for the Helsinki NLP</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{url_for('static',filename='css/bulma-0.9.2/css/bulma.css')}}" />
-    
-	<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <title>First Flask App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
+<script>
+function myFunction() {
+var input= $('#input').val();
+  $.ajax({
+              url: "/translate",
+              type: "POST",
+              data: {input:input}
+          }).done(function(response) {
+            var html= "<br><br><br><p> <b> RESULT : <b><p>";
+            response =response.result;
+                 $.each(response,function(key,val){
+                 console.log(val);
+                    html+="<p>"+val+"<p>"
+                });
+                html +="<br>";
+                $(".show-data").append(html);
+            });
+};
+  </script>
 <body>
-	<div class="container">
-		<div class="my-6">
-			<h1 class="title is-1">Flask Translation Service</h1>
-			<p class="subtitle is-3">A Machine Learning Based App</p>
-		</div>
-		<div class="block">
-			<div class="box is-relative" style="z-index:2;">
-				<div class="columns">
-				<div class="column">
-					<form action="{{ url_for('translateApp')}}" method="POST">
-						<div class="select my-1">
-							<select name="sourceLang">
-								{% for sourceLang in supp_langs %}
-									<option name="{{sourceLang}}" id="{{sourceLang}}" value="{{sourceLang}}">{{ sourceLang }}</option>
-								{% endfor %}
-							</select>
-						</div>
-						<div class="control">
-							<textarea class="textarea has-fixed-size" placeholder="Type..." name="textToTranslate"></textarea>
-						</div>
-					</div>
-					<button class="button is-rounded is-danger" style="margin-top:80px;" type="submit" value="predict">
-						<span class="icon">
-							<i class="fas fa-github"></i>
-						</span>
-					</button>
-					<div class="column">
-						<div class="select my-1">
-							<select name="targetLang">
-								{% for targetLang in supp_langs %}
-									<option name="{{targetLang}}" id="{{targetLang}}" value="{{targetLang}}">{{ targetLang }}</option>
-								{% endfor %}
-							</select>
-						</div>
-				</form>
-					<div class="control">
-						<p class="subtitle is-4">
-							{{transText}}
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		</div>
-		<div class="box has-background-primary is-shadowless is-radiusless" style="margin-top:-30px;">
-			<div>
-				{% for hist_id,_ in history.items() %}
-					<div class="columns">
-						<div class="column">
-							<p class="subtitle has-text-white is-6 pb-2">{{history[hist_id]['src']}}</p>
-							<p class="title has-text-white is-5">{{history[hist_id]['txt']}}</p>
-						</div>
-						<div class="column">
-							<p class="subtitle has-text-white is-6 pb-2">{{history[hist_id]['tgt']}}</p>
-							<p class="title has-text-white is-5">{{history[hist_id]['trans']}}</p>
-						</div>
-					</div>
-					<hr>
-				{% endfor %}
-			</div>
-		</div>
-	</div>
-
-	<div class="footer">
-	</div>
-</div>
+    <p>
+        Taking input from web<br><br>
+            Input<input type="text" id="input" name="input"><br><br>
+            <button id="clicked" onclick="myFunction()">Submit</button>
+        </p>
+    <div class="show-data" >
+    </div>
 </body>
 </html>

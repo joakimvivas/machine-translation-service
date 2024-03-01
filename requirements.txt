@@ -1,4 +1,9 @@
 transformers
 torch
 flask
+requests
+render_template
+jsonify
 translate
+sacremoses
+sentencepiece
