@@ -69,3 +69,17 @@ docker run -p 5000:5000 -v $(pwd)/data:/app/data -d machine-translation-service
 ```
 
 The front end should then become available at http://localhost:5000.
+
+
+## Call the service with curl
+```
+curl --location --request POST 'http://localhost:5000/v1/translate' \
+--header 'Content-Type: application/json' \
+-d '{
+ "text":"hello",
+ "source":"en",
+ "target":"es"
+}'
+```
+
+curl --location --request GET 'http://localhost:5000/v1/lang_routes'
