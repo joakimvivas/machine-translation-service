@@ -10,7 +10,6 @@ parser.add_argument(
     "--target", type=str, help="sum the integers (default: find the max)"
 )
 
-
 def download_language_model(source, target):
     model = f"opus-mt-{source}-{target}"
     print(">>>Downloading data for %s to %s model..." % (source, target))
@@ -27,7 +26,6 @@ def download_language_model(source, target):
             print("Error retrieving model from url. Please confirm model exists.")
             os.rmdir(os.path.join("data", model))
             break
-
 
 if __name__ == "__main__":
     args = parser.parse_args()

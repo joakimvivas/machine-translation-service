@@ -1,4 +1,4 @@
-# LANGUAGE TRANSLATOR API
+# Translation flask API for the Helsinki NLP
 
 This is the language translation API based on transformers and MarianMT model for language translation (based on huggingface). This provides easy pretrained Language models that can be used to do machine translation in any 2 desired languages. There is one webpage as well that works on MyMemory API to provide translation that can also store recent translations.  
 

@@ -37,7 +37,7 @@ class Translator():
         return words
 
 # v0 API FUNCTION
-def HTTPTranslate(textToTranslate,toLang,fromLang="English"):
+def HTTPTranslate(textToTranslate,toLang="Spanish",fromLang="English"):
     translator = Tr(from_lang=fromLang,to_lang=toLang)
     try:
         translation=translator.translate(textToTranslate)
