@@ -39,3 +39,5 @@ docker run --name translate -p 5000:5000 -d machine-translation-service
 ```
 
 The front end should then become available at ```http://localhost:5000```
+
+**Important:** The first time, the time to load could be higher because the application will download the AI models from its original data source.
