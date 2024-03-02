@@ -1,6 +1,6 @@
 # Helsinki-NLP based English-Spanish Machine Translation App
 
-This is a **Python Flask application** based on the [Huggingface](https://huggingface.co) transformer library with the "[Helsinki-NLP/opus-mt-en-en-es](https://huggingface.co/Helsinki-NLP/opus-mt-en-es)" model developed by the [Language Technology Research Group of the University of Helsinki](https://blogs.helsinki.fi/language-technology/).
+This is a **Python Flask application** based on the [Huggingface](https://huggingface.co) transformer library with the "[Helsinki-NLP/opus-mt-en-en-es](https://huggingface.co/Helsinki-NLP/opus-mt-en-es)" model developed by the [Language Technology Research Group of the University of Helsinki](https://blogs.helsinki.fi/language-technology/) and CSS based on [Materialize](https://materializecss.com/), a modern responsive CSS framework based on Material Design by Google.
 
 ![Homescreen](/static/images/homescreen.png)
 
