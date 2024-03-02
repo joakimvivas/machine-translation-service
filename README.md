@@ -33,8 +33,15 @@ http://localhost:5000/
 
 ### To run with docker
 
+1. **Pre-requirements:** You need to have installed Docker ([Guide to install it](https://docs.docker.com/engine/install/))
+
+2. Run the Docker build
 ```
 docker build -t machine-translation-service .
+```
+
+3. Run and Start the Docker container
+```
 docker run --name translate -p 5000:5000 -d machine-translation-service
 ```
 
