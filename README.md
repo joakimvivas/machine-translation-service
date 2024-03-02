@@ -7,17 +7,22 @@ This is a **Python Flask application** based on the [Huggingface](https://huggin
 ## Run the Application
 ### To run Locally
 
-1. Cd into your repo as such:
+1. Clone the repository in your Local
+```
+git clone https://github.com/joakimvivas/machine-translation-service.git
+```
+
+2. Cd into the repo as such:
 ```
 $ cd machine-translation-service
 ```
 
-2. Install requirements:
+3. Install requirements:
 ```
 $ pip install -r requirements.txt
 ```
 
-3. Run the server using this one simple command:
+4. Run the server using this one simple command:
 ```
 $ flask run
 ```
@@ -30,7 +35,7 @@ http://localhost:5000/
 
 ```
 docker build -t machine-translation-service .
-docker run -p 5000:5000 -d machine-translation-service
+docker run --name translate -p 5000:5000 -d machine-translation-service
 ```
 
 The front end should then become available at ```http://localhost:5000```
