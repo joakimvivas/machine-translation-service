@@ -2,6 +2,8 @@
 
 This is a **Python Flask application** based on the [Huggingface](https://huggingface.co) transformer library with the "[Helsinki-NLP/opus-mt-en-en-es](https://huggingface.co/Helsinki-NLP/opus-mt-en-es)" model developed by the [Language Technology Research Group of the University of Helsinki](https://blogs.helsinki.fi/language-technology/).
 
+![Homescreen](/static/images/homescreen.png)
+
 ## Run the Application
 ### To run Locally
 
