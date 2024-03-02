@@ -45,7 +45,7 @@
 function myFunction() {
 var input= $('#input').val();
   $.ajax({
-              url: "/translate_en_es",
+              url: "/translate_es_en",
               type: "POST",
               data: {input:input}
           }).done(function(response) {
@@ -65,8 +65,8 @@ var input= $('#input').val();
         <p><h3><i class="material-icons left md-48">translate</i> Translation App</h3></p>
         <div class="row">
             <div class="input-field col s12">
-                <button class="btn teal darken-4" onclick="location.href='./'">English to Spanish<i class="material-icons right">flag</i></button>
-                <button class="btn teal accent-4" onclick="location.href='./spanish'">Spanish to English<i class="material-icons right">flag</i></button>
+                <button class="btn teal accent-4" onclick="location.href='./'">English to Spanish<i class="material-icons right">flag</i></button>
+                <button class="btn teal darken-4" onclick="location.href='./spanish'">Spanish to English<i class="material-icons right">flag</i></button>
             </div>
             <div class="input-field col s12">
                 <textarea placeholder="Type to Translate" name="input" id="input"></textarea><br><br>
