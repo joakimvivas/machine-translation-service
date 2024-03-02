@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AI Translation flask API for the Helsinki NLP</title>
+    <title>Helsinki-NLP based English-Spanish Machine Translation App</title>
     <link rel="icon" type="image/x-icon" href="/static/images/language-solid.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Compiled and minified CSS -->
@@ -65,8 +65,9 @@ var input= $('#input').val();
         <p><h3><i class="material-icons left md-48">translate</i> Translation App</h3></p>
         <div class="row">
             <div class="input-field col s12">
-                <button class="btn teal accent-4" onclick="location.href='./'">English to Spanish<i class="material-icons right">flag</i></button>
-                <button class="btn teal darken-4" onclick="location.href='./spanish'">Spanish to English<i class="material-icons right">flag</i></button>
+                <button class="btn teal accent-4" onclick="location.href='./english-to-spanish'">English to Spanish<i class="material-icons right">flag</i></button>
+                <button class="btn teal darken-4" onclick="location.href='./spanish-to-english'">Spanish to English<i class="material-icons right">flag</i></button>
+                <button class="btn teal accent-4" onclick="location.href='./french-to-spanish'">French to Spanish<i class="material-icons right">flag</i></button>
             </div>
             <div class="input-field col s12">
                 <textarea placeholder="Type to Translate" name="input" id="input"></textarea><br><br>
@@ -95,7 +96,7 @@ var input= $('#input').val();
     <div class="container">
         <div class="row">
             <div class="input-field col s12">
-                <p>This is a <b>Python Flask application</b> based on the <a href="https://huggingface.co" target="_blank">Huggingface</a> transformer library with the "<a href="https://huggingface.co/Helsinki-NLP/opus-mt-en-es" target="_blank">Helsinki-NLP/opus-mt-en-en-es</a>" model developed by the <a href="https://blogs.helsinki.fi/language-technology/" target="_blank">Language Technology Research Group of the University of Helsinki</a>.</p>
+                <p>This is a <b>Python Flask application</b> based on the <a href="https://huggingface.co" target="_blank">Huggingface</a> transformer library with the "<a href="https://huggingface.co/Helsinki-NLP" target="_blank">Helsinki-NLP</a>" model developed by the <a href="https://blogs.helsinki.fi/language-technology/" target="_blank">Language Technology Research Group of the University of Helsinki</a>.</p>
                 <p>Developed with <i class="material-icons md-14">favorite</i> in Barcelona, by <a href="https://www.joakimvivas.com/" target="_blank">@JoakimVivas</a> | <a href="https://github.com/joakimvivas/machine-translation-service/blob/main/LICENSE" target="_blank">MIT License</a> | <a href="https://github.com/joakimvivas/machine-translation-service" target="_blank">Contributions</a> | <a href="https://github.com/joakimvivas/machine-translation-service/discussions" target="_blank">Discussions</a></p>
             </div>
         </div>
