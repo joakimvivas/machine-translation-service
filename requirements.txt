@@ -2,7 +2,7 @@ transformers
 torch
 flask
 requests
-render_template
+template-render
 jsonify
 translate
 sacremoses
