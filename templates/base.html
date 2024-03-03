@@ -1,0 +1,61 @@
+{% block doc -%}
+<!DOCTYPE html>
+<html{% block html_attribs %}{% endblock html_attribs %}>
+{%- block html %}
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- Title website -->
+    <title>Helsinki-NLP based English-Spanish Machine Translation App</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/images/language-solid.png">
+
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/static/css/materialize.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<header>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="./" class="brand-logo center"><i class="material-icons left navbar">translate</i> Translation App</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="./english-to-spanish">English to Spanish<i class="material-icons right">flag</i></a></li>
+                <li><a href="./spanish-to-english">Spanish to English<i class="material-icons right">flag</i></a></li>
+                <li><a href="./french-to-spanish">French to Spanish<i class="material-icons right">flag</i></a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<body{% block body_attribs %}{% endblock body_attribs %}>
+    {% block body -%}
+    {% block content -%}
+    {%- endblock content %}
+
+    {% block scripts %}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/materialize.js"></script>
+    {%- endblock scripts %}
+    {%- endblock body %}
+</body>
+
+<footer>
+    <div class="page-footer">
+        <div class="row">
+            <div class="input-field col s12">
+                <p>This is a <b>Python Flask application</b> based on the <a href="https://huggingface.co" target="_blank">Huggingface</a> transformer library with the "<a href="https://huggingface.co/Helsinki-NLP" target="_blank">Helsinki-NLP</a>" model developed by the <a href="https://blogs.helsinki.fi/language-technology/" target="_blank">Language Technology Research Group of the University of Helsinki</a>.</p>
+                <p>Developed with <i class="material-icons md-14">favorite</i> in Barcelona, by <a href="https://www.joakimvivas.com/" target="_blank">@JoakimVivas</a> | <a href="https://github.com/joakimvivas/machine-translation-service/blob/main/LICENSE" target="_blank">MIT License</a> | <a href="https://github.com/joakimvivas/machine-translation-service" target="_blank">Contributions</a> | <a href="https://github.com/joakimvivas/machine-translation-service/discussions" target="_blank">Discussions</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{%- endblock html %}
+</html>
+{% endblock doc -%}

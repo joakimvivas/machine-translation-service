@@ -1,5 +1,6 @@
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 from flask import Flask, request, render_template,jsonify
+from flask_material import Material
 tokenizer = AutoTokenizer.from_pretrained("Helsinki-NLP/opus-mt-en-es")
 model = AutoModelForSeq2SeqLM.from_pretrained("Helsinki-NLP/opus-mt-en-es")
 tokenizer_es = AutoTokenizer.from_pretrained("Helsinki-NLP/opus-mt-es-en")
@@ -8,6 +9,7 @@ tokenizer_fr = AutoTokenizer.from_pretrained("Helsinki-NLP/opus-mt-fr-es")
 model_fr = AutoModelForSeq2SeqLM.from_pretrained("Helsinki-NLP/opus-mt-fr-es")
 
 app = Flask(__name__)
+Material(app)
 
 @app.route('/')
 def home():
