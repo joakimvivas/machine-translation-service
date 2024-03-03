@@ -7,7 +7,7 @@ This is a **Python Flask application** based on the [Huggingface](https://huggin
 ## Run the Application
 ### To run Locally
 
-1. Clone the repository in your Local
+1. Clone the repository in your Local:
 ```
 git clone https://github.com/joakimvivas/machine-translation-service.git
 ```
