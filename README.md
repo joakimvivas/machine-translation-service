@@ -14,17 +14,28 @@ git clone https://github.com/joakimvivas/machine-translation-service.git
 
 2. Cd into the repo as such:
 ```
-$ cd machine-translation-service
+cd machine-translation-service
 ```
 
-3. Install requirements:
+3. Create the Python virtual environment
+
 ```
-$ pip install -r requirements.txt
+python3 -m venv machine-translation
 ```
 
-4. Run the server using this one simple command:
+Inititate the Python virtual environment
 ```
-$ flask run
+source machine-translation/bin/activate
+```
+
+4. Install requirements:
+```
+pip install -r requirements.txt
+```
+
+5. Run the server using this one simple command:
+```
+flask run
 ```
 You can now access the app on your local browser by using
 ```
