@@ -2,7 +2,7 @@
 
 This is a **Python Flask application** based on the [Huggingface](https://huggingface.co) transformer library with the "[Helsinki-NLP](https://huggingface.co/Helsinki-NLP)" model developed by the [Language Technology Research Group of the University of Helsinki](https://blogs.helsinki.fi/language-technology/) and CSS based on [Materialize](https://materializecss.com/), a modern responsive CSS framework based on Material Design by Google.
 
-![Homescreen](/static/images/homescreen.png)
+![Homescreen](/app/static/images/homescreen.png)
 
 ## Run the Application
 ### To run Locally
